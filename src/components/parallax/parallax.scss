@@ -1,0 +1,55 @@
+.parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  h1 {
+    font-size: 100px;
+  }
+
+  .rocket1 {
+    background-image: url("/rocket.png");
+    background-size: cover;
+    background-position: bottom;
+    left: 0;
+    bottom: -30px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 3;
+  }
+  .rocket2 {
+    background-image: url("/rocket.png");
+    background-size: cover;
+    background-position: bottom;
+    top: -30px;
+    right: 0px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 3;
+    transform: rotate(-45);
+  }
+  .planets {
+    background-image: url("/planets.png");
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  .stars {
+    background-image: url("/stars.png");
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+}
