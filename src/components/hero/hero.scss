@@ -1,9 +1,9 @@
 .hero {
-  height: calc(100vh - 100px);
+  height: 90vh;
   background-color: linear-gradient(180deg, #0c0c1d, #111132);
   overflow: hidden;
   position: relative;
-
+  top: 5vh;
   .wrapper {
     max-width: 1366px;
     height: 100%;
@@ -17,7 +17,8 @@
       gap: 40px;
 
       h2 {
-        font-size: 30px;
+        font-size: 50px;
+        text-decoration:underline;
         color: purple;
         letter-spacing: 7px;
       }
@@ -45,18 +46,28 @@
   }
 
   .imageContainer {
-    height: 100%;
+    height: 90vh;
+    width: 50%;
     position: absolute;
     top: 0;
     right: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    // max-height: 90vh; /* Giới hạn chiều cao */
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  .slidingTextContainer{
+  .slidingTextContainer {
     position: absolute;
     font-size: 50vh;
-    bottom: -120px;
+    bottom: -80px;
     white-space: nowrap;
-    color:rgba(75, 74, 74, 0.219);
+    color: rgba(75, 74, 74, 0.219);
     width: 50%;
     font-weight: bold;
   }

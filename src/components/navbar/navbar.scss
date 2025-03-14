@@ -1,12 +1,17 @@
 .navbar {
   height: 100px;
+  text-align: center;
+  display: flex;
   .wrapper {
     max-width: 1366px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+    gap: 30px;
     align-items: center;
-    justify-content: space-between;
     height: 100%;
+    top: 7vh;
+    position: relative;
     span {
       font-weight: bold;
     }

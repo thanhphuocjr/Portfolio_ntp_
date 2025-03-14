@@ -1,23 +1,35 @@
 import React from "react";
+import { useState, useEffect } from "react";
+
 import "./navbar.scss";
 import { motion } from "framer-motion";
 import Sidebar from "../sidebar/Sidebar";
 export const Navbar = () => {
+
+  const [greeting, setGreeting] = useState("");
+
+  useEffect(() => {
+    const getGreeting = () => {
+      const hour = new Date().getHours();
+      if (hour >= 5 && hour < 12) return "Good morning!";
+      if (hour >= 12 && hour < 18) return "Good afternoon!";
+      if (hour >= 18 && hour < 22) return "Good evening!";
+      return "Good night!";
+    };
+    setGreeting(getGreeting());
+  }, []);
+
   return (
     <div className="navbar">
       {/* Sidebar */}
-      <Sidebar/>
-
-
-
-      
+      <Sidebar />
       <div className="wrapper">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          _ntp_dev
+          {greeting}
         </motion.span>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}

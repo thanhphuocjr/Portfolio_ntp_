@@ -1,5 +1,6 @@
 .sidebar {
   position: fixed;
+  height: 10vh;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -17,7 +18,6 @@
     width: 100%;
     gap: 10px;
   }
-
 
   .links a {
     text-decoration: none;
