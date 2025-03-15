@@ -5,7 +5,7 @@ const variants = {
   initial: {
     x: -500,
     opacity: 0,
-    y: -500,
+    y: 0,
   },
   animate: {
     x: 0,
