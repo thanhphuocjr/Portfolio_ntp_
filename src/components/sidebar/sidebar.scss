@@ -1,16 +1,24 @@
 .sidebar {
   position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
   height: 10vh;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40%;
-  font-weight: bold;
-  margin-bottom: 20px;
+  transition: transform 1s ease-in-out; // Hiệu ứng chuyển động
   z-index: 999;
+
+  &.hidden {
+    transform: translateX(-50%) translateY(-100%); // Ẩn Sidebar khi cuộn xuống
+  }
+
+  &.visible {
+    transform: translateX(-50%) translateY(0); // Hiện Sidebar khi cuộn lên
+  }
 
   .links {
     display: flex;

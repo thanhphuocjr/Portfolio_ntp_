@@ -1,0 +1,83 @@
+.contact {
+  .success-message {
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h1 {
+      font-size: 100px;
+      line-height: 88px;
+    }
+    span {
+      font-weight: 300;
+    }
+  }
+  .formContainer {
+    font-size: 20px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 10px;
+      }
+      button {
+        padding: 20px;
+        border: none;
+        background-color: orange;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}
