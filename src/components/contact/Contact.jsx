@@ -30,6 +30,7 @@ const Contact = () => {
   });
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
     emailjs
       .sendForm("service_m94n3ad", "template_rh0k4ao", formRef.current, {
@@ -123,16 +124,31 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button type="submit" disabled={isSending}>
-            {isSending ? "Sending..." : "Send"}
+            {isSending ? <span className="loader"></span> : "Send"}
           </button>
           {/* Hien thi thong bao */}
           {success && (
-            <p className="success-message">✅ Message sent successfully!</p>
+            <motion.p
+              className="success-message"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              
+            >
+              ✅ Message sent successfully!
+            </motion.p>
           )}
           {error && (
-            <p className="error-message">
+            <motion.p
+              className="error-message"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+            >
               ❌ Failed to send message. Please try again.
-            </p>
+            </motion.p>
           )}
         </motion.form>
       </div>

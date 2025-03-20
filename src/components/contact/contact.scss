@@ -50,6 +50,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 20px;
 
     .phoneSvg {
       stroke: orange;
@@ -67,16 +68,70 @@
         padding: 20px;
         background-color: transparent;
         border: 1px solid white;
-        color: white;
         border-radius: 10px;
+        color: white;
       }
       button {
-        padding: 20px;
-        border: none;
-        background-color: orange;
-        border-radius: 10px;
+        color: black;
+        position: relative;
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
         font-weight: bold;
+        background-color: orange;
+        color: black;
+        border: none;
+        border-radius: 5px;
         cursor: pointer;
+        transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:disabled {
+          background-color: #5a6268;
+          cursor: not-allowed;
+        }
+      }
+
+      .loader {
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid white;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Thông báo hiệu ứng mờ dần */
+      .success-message,
+      .error-message {
+        font-size: 20px;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        text-align: center; // Căn giữa chữ
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px; // Cho đẹp hơn
+        border-radius: 5px;
+        width: 100%; // Đảm bảo nó không bị bóp lại
+      }
+      .success-message {
+        color: #155724;
+      }
+
+      .error-message {
+        color: #721c24;
       }
     }
   }
