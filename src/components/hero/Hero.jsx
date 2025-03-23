@@ -68,7 +68,7 @@ const Hero = () => {
         Writer Content Creator Influencer
       </motion.div>
       <div className="imageContainer">
-        <img src="../../../public/hero.png" alt="hero" />
+        <img src="/public/hero.png" alt="hero" />
       </div>
     </div>
   );
