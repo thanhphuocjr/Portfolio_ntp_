@@ -1,4 +1,5 @@
 import React from "react";
+import './link.scss'
 import {motion} from "framer-motion"
 export const Links = () => {
   const items = ["HomePage", "Services", "Portfolio", "Contact", "About"];

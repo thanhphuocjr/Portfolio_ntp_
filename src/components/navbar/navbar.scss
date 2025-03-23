@@ -1,7 +1,12 @@
+@import "../../app.scss";
 .navbar {
   height: 100px;
   text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   display: flex;
+  text-align: center;
   .wrapper {
     max-width: 1366px;
     margin-left: auto;
@@ -12,13 +17,22 @@
     height: 100%;
     top: 7vh;
     position: relative;
+    justify-content: center;
+    text-align: center;
     span {
       font-weight: bold;
     }
-
     .social {
       display: flex;
       gap: 20px;
+    }
+    @include mobile {
+      max-width: 736px;
+      width: 100%; // Đảm bảo chiều rộng đầy đủ
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; // Căn giữa nội dung
+      align-items: center;
     }
   }
 }
